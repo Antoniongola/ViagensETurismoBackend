@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Media {
-    private int id;
+    private long id;
     private String titulo;
     private String path;
 }
