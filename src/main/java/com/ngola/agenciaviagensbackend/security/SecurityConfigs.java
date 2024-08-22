@@ -47,6 +47,7 @@ public class SecurityConfigs implements WebMvcConfigurer {
                 .authorizeHttpRequests(request -> request
                         .requestMatchers(HttpMethod.POST, "api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "api/auth/token/refresh").permitAll()
+                        .requestMatchers(HttpMethod.POST, "api/user").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(oauth->oauth.jwt(Customizer.withDefaults()))
